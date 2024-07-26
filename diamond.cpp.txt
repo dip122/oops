@@ -1,0 +1,31 @@
+
+#include <iostream>
+using namespace std;
+
+class Base{
+    protected:
+    int d = 1;
+};
+
+class child1: virtual public Base{
+    
+};
+
+class child2: virtual public Base{
+    
+};
+
+class GrandChild:public child1,public child2{
+    public:
+    void print(){
+        cout<<d<<endl;
+    }
+};
+
+int main() {
+    // Write C++ code here
+    GrandChild ob;
+    ob.print();
+
+    return 0;
+}

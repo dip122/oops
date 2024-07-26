@@ -1,0 +1,34 @@
+
+#include <iostream>
+using namespace std;
+
+class Base{
+    public:
+    Base(){
+        cout<<"Default Constructor is called"<<endl;
+    }
+    ~Base(){
+        cout<<"base Destructor is called"<<endl;
+    }
+};
+
+class child:public Base{
+    public:
+    child(){
+        cout<<"child constructor is called"<<endl;
+    }
+    ~child(){
+        cout<<"child desctructor is called"<<endl;
+    }
+};
+
+
+int main() {
+    // Write C++ code here
+    Base *ptr;
+    child ob;
+    ptr = &ob;
+    delete ptr;
+    
+    return 0;
+}

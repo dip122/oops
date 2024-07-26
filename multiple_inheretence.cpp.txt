@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+class Base1 {
+    public :
+    Base1(){
+        cout<<"Default constructor is called";
+    }
+    void print(){
+        cout<<"base1"<<endl;
+    }
+};
+
+class Base2{
+    public:
+    Base2(){
+        cout<<"Default Constructor is called"<<endl;
+    }
+    void print(){
+        cout<<"base2"<<endl;
+    }
+};
+
+class child:public Base1 , public Base2{
+    public:
+    child(){
+        cout<<"Default constructor is called"<<endl;
+    }
+};
+
+
+int main() {
+    // Write C++ code here
+    child ob;
+    ob.Base1::print();
+    ob.Base2::print();
+
+    return 0;
+}

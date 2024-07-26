@@ -1,0 +1,30 @@
+
+#include <iostream>
+using namespace std;
+
+class Base{
+    public:
+    Base(){
+        cout<<"Base Constructor is called"<<endl;
+    }
+    virtual void print() = 0;
+};
+
+class child:public Base{
+    public:
+    child(){
+        cout<<"child constructor is called"<<endl;
+    }
+    void print(){
+        cout<<"child print"<<endl;
+    }
+};
+
+
+int main() {
+    // Write C++ code here
+    child ob;
+    ob.print();
+    
+    return 0;
+}
