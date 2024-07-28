@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+class sample{
+    private:
+    int a;
+    public:
+    sample(){
+        cout<<"Default constructor is present"<<endl;
+    }
+    sample(int a){
+        this->a = a;
+    }
+    sample(sample &ob){
+        this->a = ob.a;
+    }
+    
+    friend void print(sample &ob);
+};
+void print(sample &ob){
+    cout<<ob.a<<endl;
+}
+
+int main() {
+    // Write C++ code here
+    
+    sample ob(10);
+    print(ob);
+
+    return 0;
+}
